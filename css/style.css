@@ -1,0 +1,306 @@
+/*#fullpage{
+	max-width: 1024px;
+	margin: 0 auto;
+}*/
+.cover{
+	width:100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.3);
+	position:absolute;
+	top: 0;
+	left:0;
+	z-index: 900;
+	display: none;
+}
+.forms{
+	position: absolute;
+	left: 50%;
+	margin-left: -185px;
+	top:150px;
+	z-index: 999;
+	width: 370px;
+	height:480px;
+	background: url(../images/技术研发/bg1.png) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+.close{
+	position: absolute;
+	top:10px;
+	right: 10px;
+
+}
+.close:hover{
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); /* Internet Explorer */
+	-moz-transform:rotate(180deg); /* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); /* Opera */
+	transition:transform 0.5s;
+	-moz-transition:transform 0.5s; /* Firefox 4 */
+	-webkit-transition:transform 0.5s; /* Safari and Chrome */
+	-o-transition:transform 0.5s; /* Opera */
+}
+.forms form{
+	width: 290px;
+	margin:0 auto;
+}
+#female{
+	display: inline-block;
+	width: 93px;
+}
+#female input{
+	margin-top: 15px;
+	position: relative;
+	left: 50%;
+	margin-left: -6.5px;
+}
+#male{
+	display: inline-block;
+	width: 66px;
+	float: right;
+}
+#male input{
+	margin-top: 15px;
+	position: relative;
+	left: 50%;
+	margin-left: -6.5px;
+}
+.text_input span{
+	font-size: 18px;
+	display: inline-block;
+	width: 80px;
+	text-align: center;
+	height:22px;
+}
+.text_input input{
+	outline:none;
+	font-size: 18px;
+	width:200px;
+	border: none;
+	border-bottom: rgb(217,217,217) solid 2px;
+}
+.forms p{
+	margin-top: 15px;
+	width: 100%;
+}
+.buttons{
+	/*font: normal 16px/28px Microsoft Yahei, Arial, sans-serif;*/
+    background-color: rgb(255,255,255);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:5px 15px;
+    font-size: 15px;
+    position: relative;
+    left: 50%;
+    margin-left: -35px;
+}
+/*进入*/
+#page1{
+	/*background: url(../images/进入/bg.png) no-repeat;
+	background-size: 100% 100%;*/
+	position: relative;
+}
+#bg_1{
+	position:relative;
+	width:506px;
+	height:126px;
+	margin:0 auto;
+	top:190px;
+}
+#flower{
+	width: 249px;
+	height:27px;
+	position: relative;
+	top:-52px;
+	left:-4px;
+}
+#flower-1{
+	margin-left: 7px;
+}
+#flower-2{
+	position: absolute;
+	top:2px;
+	left:0;
+}
+#train{
+	width: 177px;
+	height: 129px;
+	position:absolute;
+	top:-20px;
+	left:450px;
+}
+#smoke_1{
+	margin-left: 41px;
+}
+#smoke_2{
+	position: absolute;
+	left: 41px;
+	top:4px;
+}
+#girl_1{
+	position: relative;
+	top:200px;
+	left:190px;
+}
+#Loading{
+	width: 20%;
+	position: absolute;
+	left:50%;
+	margin-left:-10%;
+	bottom: 20%;
+
+}
+/*技术研发*/
+#page2{
+	background: url(../images/技术研发/bg.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+.dialog_box{
+	background: url(../images/技术研发/dialog-box.png) no-repeat;
+	background-size: 100% 100%;
+	width: 70%;
+	position: absolute;
+	top:3%;
+    left: 50%;
+    margin-left:-35%;
+	z-index: 999;
+	display: none;
+	padding: 15px;
+	font-size: 18px;
+	line-height: 25px;
+}
+.pic{
+	width: 95px;
+	height: 80%;
+	float:left;
+}
+.pic img{
+	max-width: 100%;
+	height: auto;
+	display: none;
+}
+/*.talks{
+	width: 75%;
+	height:80%;
+	position: absolute;
+	top:10%;
+	left: 20%;
+}*/
+.menu{
+	position: absolute;
+	top:3%;
+	right:3%;
+}
+#mobiler{
+	position: absolute;
+	top:25%;
+	left:19%;
+}
+#programmers{
+	width: 225px;
+	height:180px;
+	position: absolute;
+	top:47%;
+	left: 50%;
+	margin-left: -80px;
+}
+#qian{
+	position: relative;
+	left: 30px;
+	top:10px;
+}
+#cat{
+	position: relative;
+	top:-60px;
+	left: 105px;
+}
+#more{
+	position: relative;
+	left:-15px;
+	top:-280px;
+}
+/*产品*/
+#page3{
+	background: url(../images/产品/bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+#greener{
+	position: absolute;
+	top:24%;
+	left:21%;
+}
+#tunnel{
+	width: 206px;
+	height: 100px;
+	position: absolute;
+	top: 37%;
+	right:34%;
+}
+.gai{
+	position: relative;
+	top:-3px;
+	left: 12px;
+	transform: rotateY(180deg);
+	transform-origin:100% 100% 0px;
+	-ms-transform: rotateY(180deg);/* IE 9 */
+	-ms-transform-origin:100% 100% 0px; /* IE 9 */
+	-webkit-transform: rotateY(180deg); /* Safari and Chrome */
+	-webkit-transform-origin:100% 100% 0px; /* Safari and Chrome */
+	transition:transform 0.5s;
+	-moz-transition:transform 0.5s; /* Firefox 4 */
+	-webkit-transition:transform 0.5s; /* Safari and Chrome */
+	-o-transition:transform 0.5s; /* Opera */
+	z-index: 800;
+}
+.gais{
+	transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);/* IE 9 */
+	-webkit-transform: rotateY(0deg); /* Safari and Chrome */
+}
+#sheji{
+	position:relative;
+	left: 15px;
+}
+#persons{
+    display: inline-block;
+    position: relative;
+    top:50%;
+    left: 27%;
+}
+#camera{margin-left: 30px;}
+#hj{margin-left: 47px;}
+/*记者团*/
+#page4{
+	background: url(../images/记者团/bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+#xingzheng{
+	position: absolute;
+	top:28%;
+	left: 10%;
+}
+#lady{
+	width:105px;
+	position: absolute;
+	top:20%;
+	left:42%;
+}
+#s_dialog_box{
+	background:url(../images/记者团/小对话框.png) no-repeat;
+	position: relative;
+	left: -18px;
+	top:5px;
+}
+#s_dialog_box p{
+    padding: 13px;
+}
+#boy_4{
+	position: relative;
+	top:-160px;
+	left:130px;
+}
