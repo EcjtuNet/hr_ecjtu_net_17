@@ -1,7 +1,18 @@
-/*#fullpage{
-	max-width: 1024px;
-	margin: 0 auto;
-}*/
+/*fullpage 导航属性更改*/
+#fp-nav ul li{
+	font-size: 18px;
+}
+#fp-nav ul li a span{
+    background: none;
+}
+#fp-nav ul li a{
+    background: url(../images/jishu/nav.png) no-repeat;
+    background-size: 100% 100%;
+}
+#fp-nav ul li a.active{
+	background: url(../images/jishu/nav_active.png) no-repeat;
+    background-size: 100% 100%;
+}
 .cover{
 	width:100%;
 	height: 100%;
@@ -16,11 +27,11 @@
 	position: absolute;
 	left: 50%;
 	margin-left: -185px;
-	top:150px;
+	top:15px;
 	z-index: 999;
 	width: 370px;
-	height:480px;
-	background: url(../images/技术研发/bg1.png) no-repeat;
+	height:568px;
+	background: url(../images/jishu/bg1.png) no-repeat;
 	background-size: 100% 100%;
 	display: none;
 }
@@ -80,9 +91,23 @@
 	border: none;
 	border-bottom: rgb(217,217,217) solid 2px;
 }
+.text_input select{
+	outline:none;
+	font-size: 18px;
+	width:200px;
+	border: none;
+	border-bottom: rgb(217,217,217) solid 2px;
+}
 .forms p{
 	margin-top: 15px;
 	width: 100%;
+}
+.forms h2{
+	text-align: center;
+	font-size: 23px;
+	font-weight: 600;
+	height: 40px;
+	line-height: 40px;
 }
 .buttons{
 	/*font: normal 16px/28px Microsoft Yahei, Arial, sans-serif;*/
@@ -97,6 +122,9 @@
     position: relative;
     left: 50%;
     margin-left: -35px;
+}
+.programmer{
+   cursor:pointer;
 }
 /*进入*/
 #page1{
@@ -156,12 +184,40 @@
 }
 /*技术研发*/
 #page2{
-	background: url(../images/技术研发/bg.png) no-repeat;
+	background: url(../images/jishu/bg.png) no-repeat;
 	background-size: 100% 100%;
 	position: relative;
 }
+#more_tip{
+	position: absolute;
+	width: 300px;
+	height: 50px;
+	background-color: #fff;
+	border: black solid 1px;
+	border-radius: 3px;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 50px;
+	text-align: center;
+	left: 50%;
+	margin-left: -150px;
+	top:-60px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+.more_tip{
+	transform: scale(2,4);
+    -ms-transform: scale(2,4);	/* IE 9 */
+    -webkit-transform: scale(2,4);	/* Safari 和 Chrome */
+    -o-transform: scale(2,4);	/* Opera */
+    -moz-transform: scale(2,4);	/* Firefox */
+    transition:transform 0.5s;
+	-moz-transition:transform 0.5s; /* Firefox 4 */
+	-webkit-transition:transform 0.5s; /* Safari and Chrome */
+	-o-transition:transform 0.5s; /* Opera */
+}
 .dialog_box{
-	background: url(../images/技术研发/dialog-box.png) no-repeat;
+	background: url(../images/jishu/dialog-box.png) no-repeat;
 	background-size: 100% 100%;
 	width: 70%;
 	position: absolute;
@@ -226,7 +282,7 @@
 }
 /*产品*/
 #page3{
-	background: url(../images/产品/bg.png) no-repeat;
+	background: url(../images/chanpin/bg.png) no-repeat;
 	background-size: 100% 100%;
 }
 #greener{
@@ -251,6 +307,8 @@
 	-ms-transform-origin:100% 100% 0px; /* IE 9 */
 	-webkit-transform: rotateY(180deg); /* Safari and Chrome */
 	-webkit-transform-origin:100% 100% 0px; /* Safari and Chrome */
+	-o-transform: rotateY(180deg); 
+	-o-transform-origin:100% 100% 0px;
 	transition:transform 0.5s;
 	-moz-transition:transform 0.5s; /* Firefox 4 */
 	-webkit-transition:transform 0.5s; /* Safari and Chrome */
@@ -269,14 +327,57 @@
 #persons{
     display: inline-block;
     position: relative;
-    top:50%;
+    top:55%;
     left: 27%;
 }
 #camera{margin-left: 30px;}
-#hj{margin-left: 47px;}
+#hd{
+	display:inline-block;
+	width: 108px;
+	height: 137px;
+	position: relative;
+}
+#hd p{
+	width: 150px;
+	height: 50px;
+	background-color: #fff;
+	border: black solid 2px;
+	border-radius:5px;
+	position:absolute;
+	top:-30px;
+	left:-20px;
+	font-size:18px;
+	line-height: 25px;
+	opacity: 0;
+}
+#hair{
+	position: absolute;
+	top:0;
+	left: 5px;
+
+}
+#hj{
+	display:inline-block;
+	width: 68px;
+	height: 129px;
+	margin-left: 47px;
+	position: relative;
+}
+#hj p{
+	padding: 8px;
+	background-color: #fff;
+	border: black solid 2px;
+	border-radius:5px;
+	position:absolute;
+	top:-15px;
+	left:8px;
+	font-size:18px;
+	opacity: 0;
+	
+}
 /*记者团*/
 #page4{
-	background: url(../images/记者团/bg.png) no-repeat;
+	background: url(../images/jizhetuan/bg.png) no-repeat;
 	background-size: 100% 100%;
 }
 #xingzheng{
@@ -291,16 +392,24 @@
 	left:42%;
 }
 #s_dialog_box{
-	background:url(../images/记者团/小对话框.png) no-repeat;
+	width: 110px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color:#fff;
+	border-radius: 10px;
+	border: black solid 1px;
 	position: relative;
 	left: -18px;
 	top:5px;
-}
-#s_dialog_box p{
-    padding: 13px;
 }
 #boy_4{
 	position: relative;
 	top:-160px;
 	left:130px;
+}
+#qq{
+	position: absolute;
+	bottom: 16%;
+	right: 32%;
 }
