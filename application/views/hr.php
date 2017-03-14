@@ -121,7 +121,7 @@
                         </select>
                     </label>
                 </p>
-        		<p><input type="submit" name="提交" value="提&nbsp;&nbsp;交" class="buttons"></p>
+        		<p><input type="button" name="提交" value="提&nbsp;&nbsp;交" class="buttons"></p>
         	</form>
         </div>
 		<div class="dialog_box" id="dialog_box_2">
@@ -229,7 +229,7 @@
                         </select>
                     </label>
                 </p>
-                <p><input type="submit" name="提交" value="提&nbsp;&nbsp;交" class="buttons"></p>
+                <p><input type="button" name="提交" value="提&nbsp;&nbsp;交" class="buttons"></p>
             </form>
         </div>
 		<div class="dialog_box" id="dialog_box_3">
@@ -356,7 +356,7 @@
                         </select>
                     </label>
                 </p>
-                <p><input type="submit" name="提交" value="提&nbsp;&nbsp;交" class="buttons"></p>
+                <p><input type="button" name="提交" value="提&nbsp;&nbsp;交" class="buttons"></p>
             </form>
         </div>
 		<div class="dialog_box" id="dialog_box_4">
