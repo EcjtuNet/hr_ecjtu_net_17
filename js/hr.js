@@ -182,16 +182,6 @@ $(document).ready(function(){
 
 	var submit = $(".buttons");
 	submit.bind("click",function(){
-	    // //event.preventDault 兼容ie&&ff
-	    // var stopDefault = function(e) { 
-	    //     if (e && e.preventDefault) {//如果是FF下执行这个
-	    //         e.preventDefault(e); 
-	    //     }else{ 
-	    //         window.event.returnValue = false;//如果是IE下执行这个
-	    //     }
-	    //     return false;
-	    // }
-	    // stopDefault(e);
 	    var that = $(this),
 	    parent = that.parent().parent().parent(),
 	    sex_input = parent.find("input[name='user_sex']"),
@@ -204,7 +194,7 @@ $(document).ready(function(){
 	    join_center = parent.find("select[name='join_center']"),
 	    join_title= parent.find("select[name='join_title']"),
 	    $.ajax({
-	        url: '',
+	        url: "http://localhost:8080/hr_ecjtu_net_17/index.php/handle",
 	        type: 'POST',
 	        dataType: 'json',
 	        data: { 
@@ -218,6 +208,14 @@ $(document).ready(function(){
 	                join_center:join_center.val(),
 	                join_title:join_title.val(),
 	            },
+	        success:function(data)
+	        {
+	        	console.log(data);
+	        },
+	        error:function(error)
+	        {
+	        	console.log(error);
+	        },
 	    });
 	 });   
 });
