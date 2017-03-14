@@ -182,16 +182,16 @@ $(document).ready(function(){
 
 	var submit = $(".buttons");
 	submit.bind("click",function(){
-	    //event.preventDault 兼容ie&&ff
-	    var stopDefault = function(e) { 
-	        if (e && e.preventDefault) {//如果是FF下执行这个
-	            e.preventDefault(e); 
-	        }else{ 
-	            window.event.returnValue = false;//如果是IE下执行这个
-	        }
-	        return false;
-	    }
-	    stopDefault(e);
+	    // //event.preventDault 兼容ie&&ff
+	    // var stopDefault = function(e) { 
+	    //     if (e && e.preventDefault) {//如果是FF下执行这个
+	    //         e.preventDefault(e); 
+	    //     }else{ 
+	    //         window.event.returnValue = false;//如果是IE下执行这个
+	    //     }
+	    //     return false;
+	    // }
+	    // stopDefault(e);
 	    var that = $(this),
 	    parent = that.parent().parent().parent(),
 	    sex_input = parent.find("input[name='user_sex']"),
