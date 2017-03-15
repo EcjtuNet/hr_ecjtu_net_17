@@ -6,6 +6,17 @@ $(document).ready(function(){
 	                var programmer_3=document.getElementById("page3").getElementsByClassName("programmer");
 	                var dialog_box_4=document.getElementById("dialog_box_4").getElementsByTagName("img");
 	                var programmer_4=document.getElementById("page4").getElementsByClassName("programmer");
+					var that=$('.buttons');
+					var parent = that.parent().parent().parent();
+					var sex_input = parent.find("input[name='user_sex']");
+					var name_input = parent.find("input[name='user_name']");
+					var phone_input = parent.find("input[name='user_phone']");
+					var QQ_input = parent.find("input[name='user_QQ']");
+					var college_input = parent.find("select[name='user_college']");
+					var grade_input = parent.find("input[name='user_grade']");
+					var major_input = parent.find("input[name='user_major']");
+					var join_center = parent.find("select[name='join_center']");
+					var join_title= parent.find("select[name='join_title']");
 					var num=0;
 					function type(s,obj){	  
 					    time=setInterval(function(){
@@ -35,7 +46,7 @@ $(document).ready(function(){
 								$("#dialog_box_2").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_2'));
+	                                	type('移动开发部是日新新星部门，为了适应互联网发展与方便校友，于2014年建立，主修iOS手机App及Android手机App技能，在这里能完成你所有疯狂的想法，手机不再只是你的一个工具，而是成为一个万能的神器，只需要一点创意你就能完成所有你想要的功能',$('#dialog_box_2'));
 									break;
 									case 1:
 									    type('产品部隶属于日新网最酷的技术中心，主要负责日新互联网产品的运营、市场推广，我们也致力交大的官网建设，不断便利交大师生的学习与生活。同时负责技术中心的行政事务，对接日常的活动和对外交流。如果你有热情，有想法，有责任，日新技术产品部欢迎你。',$('#dialog_box_2'));
@@ -147,6 +158,15 @@ $(document).ready(function(){
 					$(".cover").hide();
 					$(".forms").hide();
 					$('#fp-nav ').show();
+                       sex_input.val(""),
+	    	           name_input.val(""),
+	    	           phone_input.val(""),
+	    	           QQ_input.val(""),
+	    	           college_input.val(""),
+	    	           grade_input.val(""),
+	    	           major_input.val(""),
+	    	           join_center.val(""),
+	    	           join_title.val(""),
 					$.fn.fullpage.setAllowScrolling(true);
 				})//关闭报名表
 				$(".cover").click(function(){
@@ -154,6 +174,15 @@ $(document).ready(function(){
 					$(".forms").hide();
 					$('#fp-nav ').show();
 					$('.dialog_box').hide();
+		                sex_input.val(""),
+	    	           name_input.val(""),
+	    	           phone_input.val(""),
+	    	           QQ_input.val(""),
+	    	           college_input.val(""),
+	    	           grade_input.val(""),
+	    	           major_input.val(""),
+	    	           join_center.val(""),
+	    	           join_title.val(""),
 					clearInterval(time);
 					num=0;
 					$.fn.fullpage.setAllowScrolling(true);
@@ -177,45 +206,56 @@ $(document).ready(function(){
     addEventListener('load',addoption($("#join_center1"),$("#join_title1")));
     addEventListener('load',addoption($("#join_center2"),$("#join_title2")));
     addEventListener('load',addoption($("#join_center3"),$("#join_title3")));
-
+    
+    function tip(obj,tip){
+       obj.blur(function(){
+       	if(obj.val()==""){
+       		tip.show();
+       	}else{
+       		tip.hide();
+       	}
+       });
+    }
+    tip(name_input,$('.tip1'));
+    tip(phone_input,$('.tip2'));
+    tip(join_center,$('.tip3'));
 
 
 	var submit = $(".buttons");
 	submit.bind("click",function(){
-	    var that = $(this),
-	    parent = that.parent().parent().parent(),
-	    sex_input = parent.find("input[name='user_sex']"),
-	    name_input = parent.find("input[name='user_name']"),
-	    phone_input = parent.find("input[name='user_phone']"),
-	    QQ_input = parent.find("input[name='user_QQ']"),
-	    college_input = parent.find("select[name='user_college']"),
-	    grade_input = parent.find("input[name='user_grade']"),
-	    major_input = parent.find("input[name='user_major']");
-	    join_center = parent.find("select[name='join_center']"),
-	    join_title= parent.find("select[name='join_title']"),
-	    $.ajax({
-	        url: "http://localhost:8080/hr_ecjtu_net_17/index.php/handle",
-	        type: 'POST',
-	        dataType: 'json',
-	        data: { 
-	        	    user_sex:sex_input.val(),
-	                user_name:name_input.val(),
-	                user_phone:phone_input.val(),
-	                user_QQ:QQ_input.val(),
-	                user_college:college_input.val(),
-	                grade_input:grade_input.val(),
-	                user_major:major_input.val(),
-	                join_center:join_center.val(),
-	                join_title:join_title.val(),
-	            },
-	        success:function(data)
-	        {
-	        	console.log(data);
-	        },
-	        error:function(error)
-	        {
-	        	console.log(error);
-	        },
-	    });
+	    //console.log(name_input.val());
+	    if(name_input.val()==""||phone_input.val()==""||join_center.val()==""){
+	    	alert("请把信息填写完整");
+	    }else{
+	    	$.ajax({
+	    	    url: 'http://localhost/hr_ecjtu_net_17/index.php/handle',
+	    	    type: 'POST',
+	    	    dataType: 'json',
+	    	    data: { 
+	    	    	    user_sex:sex_input.val(),
+	    	            user_name:name_input.val(),
+	    	            user_phone:phone_input.val(),
+	    	            user_QQ:QQ_input.val(),
+	    	            user_college:college_input.val(),
+	    	            grade_input:grade_input.val(),
+	    	            user_major:major_input.val(),
+	    	            join_center:join_center.val(),
+	    	            join_title:join_title.val(),
+	    	        },
+		        success:function(data)
+		        {
+		        	if(data==1){
+		        		alert("提交成功");
+		        		$(".forms").hide();
+		        		$(".cover").hide();
+		        	}
+		        },
+		        error:function(error)
+		        {
+		        	console.log(error);
+		        },
+	     });
+	    }
+	    
 	 });   
 });
