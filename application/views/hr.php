@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
     <title>日新招新啦</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css"/>
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/css reset.css"/>
     <link rel="stylesheet" href="css/shake.css"/>
     <link rel="stylesheet" href="css/style.css"/>
