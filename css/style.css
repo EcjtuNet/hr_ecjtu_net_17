@@ -30,7 +30,7 @@
 	top:15px;
 	z-index: 999;
 	width: 370px;
-	height:568px;
+	/*height:568px;*/
 	background: url(../images/jishu/bg1.png) no-repeat;
 	background-size: 100% 100%;
 	display: none;
@@ -108,6 +108,11 @@
 	font-weight: 600;
 	height: 40px;
 	line-height: 40px;
+}
+.tips{
+	color:red;
+	font-weight: 600;
+	text-align: center;
 }
 .buttons{
 	/*font: normal 16px/28px Microsoft Yahei, Arial, sans-serif;*/
