@@ -46,7 +46,7 @@ $(document).ready(function(){
 								$("#dialog_box_2").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('移动开发部是日新新星部门，为了适应互联网发展与方便校友，于2014年建立，主修iOS手机App及Android手机App技能，在这里能完成你所有疯狂的想法，手机不再只是你的一个工具，而是成为一个万能的神器，只需要一点创意你就能完成所有你想要的功能',$('#dialog_box_2'));
+	                                	type('移动开发部是日新新星部门，为了适应互联网发展与方便校友，于2014年建立，主修iOS手机App及Android手机App技能，在这里能完成你所有疯狂的想法，手机不再只是你的一个工具，而是成为一个万能的神器，只需要一点创意你就能完成所有你想要的功能。',$('#dialog_box_2'));
 									break;
 									case 1:
 									    type('产品部隶属于日新网最酷的技术中心，主要负责日新互联网产品的运营、市场推广，我们也致力交大的官网建设，不断便利交大师生的学习与生活。同时负责技术中心的行政事务，对接日常的活动和对外交流。如果你有热情，有想法，有责任，日新技术产品部欢迎你。',$('#dialog_box_2'));
@@ -55,7 +55,7 @@ $(document).ready(function(){
 									    type('你喜欢前端吗？前端的世界一直在变化着，在各种熟悉的语言进化中迅速的化学反应。也许你和我们一样，对前端的理解也在不断刷新。我们犹如一群站在互联网风口上的攻城狮，眼前的空间充满了未知，需要我们去开拓去开垦，需要我们逆风而上，不为别的，只为能在这虚拟与现实交错的世界里昂首飞翔！    日新数据开发部门主要是做后台数据开发及日新网服务器维护，当前端的页面做好之后，我们所需要做的就是将后台数据内容渲染到页面中，使页面有了动态的内容。在这里你可以学习到php或者是python的知识，也能学习如何操作服务器。既能学到课堂学不到的知识，又能充实自己的课余生活。',$('#dialog_box_2'));
 									break;
 									case 3:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_2'));
+									    type('UI&UX设计部是充满未知性的生物的聚集地，他们形态各异，一般决定了手机APP的风格和网站的设计，设计的经理专治技术总监，现任的经理是一只猫。',$('#dialog_box_2'));
 									break;
 									default:
 									break;
@@ -80,21 +80,21 @@ $(document).ready(function(){
 								$("#dialog_box_3").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_3'));
+	                                	type('新媒体办公室：华东交通大学微信公众号是华东交通大学主要对外宣传的新媒体，第一时间发布交大权威信息，展现交大校园生活，传递正能量，服务广大师生校友，该微信平台是江西省首个开通的高校微信公众平台的订阅号，至今为止已拥有30000余粉丝。',$('#dialog_box_3'));
 									break;
 									case 1:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_3'));
+									    type('欢迎加入产品运营中心！',$('#dialog_box_3'));
 									break;
 									case 2:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_3'));
+									    type('欢迎加入视觉摄影产品！',$('#dialog_box_3'));
 									break;
 									case 3:
 									    
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_3'));
+									    type('欢迎加入日新青梅竹马！',$('#dialog_box_3'));
 									    
 									break;
 									case 4:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_3'));
+									    type('欢迎加入《交大青年》杂志社！',$('#dialog_box_3'));
 									break;
 									default:
 									break;
@@ -119,19 +119,19 @@ $(document).ready(function(){
 								$("#dialog_box_4").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_4'));
+	                                	type('微博：新浪微博“华东交通大学日新网”本着服务交大师生的宗旨，日新网主页微博以发布学校通知，传递校内外重要资讯为主。做校园里的小清新，学生们的贴心人。',$('#dialog_box_4'));
 									break;
 									case 1:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_4'));
+									    type('欢迎加入行政部门！',$('#dialog_box_4'));
 									break;
 									case 2:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_4'));
+									    type('日新网新闻出版中心下设编辑部、记者团（QQ）、新媒体办公室、微博，全面负责校园内外的新闻报道工作。新闻出版中心的全体成员始终坚持以崭新的姿态和进取的精神，用更加及时、全面、深入的报道赢得新的认可和肯定。',$('#dialog_box_4'));
 									break;
 									case 3:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_4'));
+									    type('编辑部：通常由大二至大三学生组成，负责编辑日常的网站后台编辑，对记者团采写的稿件进行编发，制作web网页专题，负责图片文字的处理，协助其他部门进行工作。',$('#dialog_box_4'));
 									break;
 									case 4:
-									    type('0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计0开发及全校师生的电脑维护等工作。UED部门全面负责所有面向用户的开发和设计',$('#dialog_box_4'));
+									    type('记者团（QQ）：负责采集学校第一手的网页信息，针对学校的各类现象进行深入挖掘报道，永远走在校园的第一现场，与各种校园达人面对面接触。',$('#dialog_box_4'));
 									break;
 									default:
 									break;
@@ -158,6 +158,7 @@ $(document).ready(function(){
 					$(".cover").hide();
 					$(".forms").hide();
 					$('#fp-nav ').show();
+					$('.tips').hide();
                        sex_input.val(""),
 	    	           name_input.val(""),
 	    	           phone_input.val(""),
@@ -174,6 +175,7 @@ $(document).ready(function(){
 					$(".forms").hide();
 					$('#fp-nav ').show();
 					$('.dialog_box').hide();
+					$('.tips').hide();
 		                sex_input.val(""),
 	    	           name_input.val(""),
 	    	           phone_input.val(""),
@@ -206,24 +208,45 @@ $(document).ready(function(){
     addEventListener('load',addoption($("#join_center1"),$("#join_title1")));
     addEventListener('load',addoption($("#join_center2"),$("#join_title2")));
     addEventListener('load',addoption($("#join_center3"),$("#join_title3")));
-    
+    var tip1=document.getElementsByClassName("tip1");
+    var tip2=document.getElementsByClassName("tip2");
+    var tip3=document.getElementsByClassName("tip3");
+    var username=document.getElementsByClassName("user_name");
+    var userphone=document.getElementsByClassName("user_phone");
+    var joincenter=document.getElementsByClassName("join_center");
     function tip(obj,tip){
-       obj.blur(function(){
-       	if(obj.val()==""){
-       		tip.show();
+       obj.onblur=function(){
+       	if(obj.value==""){
+       		tip.style.display="block";
        	}else{
-       		tip.hide();
+       		tip.style.display="none";
        	}
-       });
+       }
     }
-    tip(name_input,$('.tip1'));
-    tip(phone_input,$('.tip2'));
-    tip(join_center,$('.tip3'));
+
+    for(var i=0;i<username.length;i++){
+    	tip(username[i],tip1[i]);
+        tip(userphone[i],tip2[i]);
+        tip(joincenter[i],tip3[i]);
+    };
+
+    
 
 
 	var submit = $(".buttons");
 	submit.bind("click",function(){
 	    //console.log(name_input.val());
+	    var that = $(this),
+        parent = that.parent().parent().parent(),
+		sex_input = parent.find("input[name='user_sex']"),
+	    name_input = parent.find("input[name='user_name']"),
+		phone_input = parent.find("input[name='user_phone']"),
+		QQ_input = parent.find("input[name='user_QQ']"),
+		college_input = parent.find("select[name='user_college']"),
+		grade_input = parent.find("input[name='user_grade']"),
+		major_input = parent.find("input[name='user_major']"),
+		join_center = parent.find("select[name='join_center']"),
+		join_title= parent.find("select[name='join_title']");
 	    if(name_input.val()==""||phone_input.val()==""||join_center.val()==""){
 	    	alert("请把信息填写完整");
 	    }else{
