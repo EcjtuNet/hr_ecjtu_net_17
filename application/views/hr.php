@@ -56,13 +56,13 @@
                 </p>
                 <p style="margin-top: 10px">
                     <label class="text_input">
-                        <span>姓名</span><input type="text" name="user_name" >
+                        <span>姓名</span><input type="text" name="user_name" class="user_name">
                     </label>
                 </p>
                 <p class="tips tip1" style="display: none;">请填写姓名！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>电话号码</span><input type="text" name="user_phone" onkeyup="value=value.replace(/[^\d]/g,'') " />
+                        <span>电话号码</span><input type="text" name="user_phone" class="user_phone" onkeyup="value=value.replace(/[^\d]/g,'') " />
                     </label>
                 </p>
                 <p class="tips tip2" style="display:none;">请填写联系电话！！！</p>
@@ -107,7 +107,7 @@
                 <p style="margin-top: 0;">
                     <label class="text_input">
                         <span>中心</span>
-                        <select name="join_center" id="join_center1">
+                        <select name="join_center" id="join_center1" class="join_center">
                                     <option value=""></option>
                                     <option value="新闻出版中心">新闻出版中心</option>
                                     <option value="技术研发中心">技术研发中心</option>
@@ -166,13 +166,13 @@
                 </p>
                 <p style="margin-top: 10px">
                     <label class="text_input">
-                        <span>姓名</span><input type="text" name="user_name" >
+                        <span>姓名</span><input type="text" name="user_name" class="user_name">
                     </label>
                 </p>
                 <p class="tips tip1"  style="display: none;">请填写姓名！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>电话号码</span><input type="text" name="user_phone" onkeyup="value=value.replace(/[^\d]/g,'') " />
+                        <span>电话号码</span><input type="text" name="user_phone" class="user_phone"onkeyup="value=value.replace(/[^\d]/g,'') " />
                     </label>
                 </p>
                 <p class="tips tip2" style="display:none;">请填写联系电话！！！</p>
@@ -217,7 +217,7 @@
                 <p style="margin-top: 0;">
                     <label class="text_input">
                         <span>中心</span>
-                        <select name="join_center" id="join_center1">
+                        <select name="join_center" id="join_center2" class="join_center">
                                     <option value=""></option>
                                     <option value="新闻出版中心">新闻出版中心</option>
                                     <option value="技术研发中心">技术研发中心</option>
@@ -230,7 +230,7 @@
                 <p>
                     <label class="text_input">
                         <span>部门</span>
-                        <select name="join_title" id="join_title1">
+                        <select name="join_title" id="join_title2">
                         </select>
                     </label>
                 </p>
@@ -295,13 +295,13 @@
                 </p>
                 <p style="margin-top: 10px">
                     <label class="text_input">
-                        <span>姓名</span><input type="text" name="user_name" >
+                        <span>姓名</span><input type="text" name="user_name" class="user_name">
                     </label>
                 </p>
                 <p class="tips tip1" style="display: none;">请填写姓名！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>电话号码</span><input type="text" name="user_phone" onkeyup="value=value.replace(/[^\d]/g,'') " />
+                        <span>电话号码</span><input type="text" name="user_phone" class="user_phone"onkeyup="value=value.replace(/[^\d]/g,'') " />
                     </label>
                 </p>
                 <p class="tips tip2" style="display:none;">请填写联系电话！！！</p>
@@ -346,7 +346,7 @@
                 <p style="margin-top: 0;">
                     <label class="text_input">
                         <span>中心</span>
-                        <select name="join_center" id="join_center1">
+                        <select name="join_center" id="join_center3" class="join_center">
                                     <option value=""></option>
                                     <option value="新闻出版中心">新闻出版中心</option>
                                     <option value="技术研发中心">技术研发中心</option>
@@ -359,7 +359,7 @@
                 <p>
                     <label class="text_input">
                         <span>部门</span>
-                        <select name="join_title" id="join_title1">
+                        <select name="join_title" id="join_title3">
                         </select>
                     </label>
                 </p>
