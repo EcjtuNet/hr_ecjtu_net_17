@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="css/css reset.css"/>
     <link rel="stylesheet" href="css/shake.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        @media screen and (max-width: 420px){
+            .forms{
+                width:100%;
+                height: 100%;
+                top:0;
+                left: 0;
+                margin:0;
+            }
+            #persons{
+                top:50%;
+                left:17%;
+            }
+        }
+    </style>
 </head>
 <body>
 
