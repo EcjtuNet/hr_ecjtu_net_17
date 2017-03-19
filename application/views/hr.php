@@ -387,7 +387,7 @@
             <img src="images/jizhetuan/jizhetuan.png" class="programmer">
             <img src="images/jizhetuan/bianjizu.png" id="boy_4" class="programmer">
         </div>
-            <img src="images/jizhetuan/qq.png" id="qq" class="programmer">
+            <img src="images/jizhetuan/QQ.png" id="qq" class="programmer">
     </section>
 </div>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
