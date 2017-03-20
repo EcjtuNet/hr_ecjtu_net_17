@@ -255,7 +255,7 @@ $(document).ready(function(){
 	    	alert("请把信息填写完整");
 	    }else{
 	    	$.ajax({
-	    	    url: 'http://localhost/hr_ecjtu_net_17/index.php/handle',
+	    	    url: 'http://hr.ecjtu.net/index.php/handle',
 	    	    type: 'POST',
 	    	    dataType: 'json',
 	    	    data: { 
