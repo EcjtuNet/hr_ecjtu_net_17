@@ -62,11 +62,11 @@
                 <p style="margin-top: 40px">
                     <label id="female">
                         <img src="images/jishu/girl.png">
-                        <input type="radio" name="user_sex" value="female" checked>
+                        <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
                         <img src="images/jishu/boy.png">
-                        <input type="radio" name="user_sex" value="male">
+                        <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
                 <p style="margin-top: 10px">
@@ -172,11 +172,11 @@
                 <p style="margin-top: 40px">
                     <label id="female">
                         <img src="images/jishu/girl.png">
-                        <input type="radio" name="user_sex" value="female" checked>
+                        <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
                         <img src="images/jishu/boy.png">
-                        <input type="radio" name="user_sex" value="male">
+                        <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
                 <p style="margin-top: 10px">
@@ -301,11 +301,11 @@
                 <p style="margin-top: 40px">
                     <label id="female">
                         <img src="images/jishu/girl.png">
-                        <input type="radio" name="user_sex" value="female" checked>
+                        <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
                         <img src="images/jishu/boy.png">
-                        <input type="radio" name="user_sex" value="male">
+                        <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
                 <p style="margin-top: 10px">

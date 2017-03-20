@@ -159,7 +159,6 @@ $(document).ready(function(){
 					$(".forms").hide();
 					$('#fp-nav ').show();
 					$('.tips').hide();
-                       sex_input.val(""),
 	    	           name_input.val(""),
 	    	           phone_input.val(""),
 	    	           QQ_input.val(""),
@@ -176,7 +175,6 @@ $(document).ready(function(){
 					$('#fp-nav ').show();
 					$('.dialog_box').hide();
 					$('.tips').hide();
-		                sex_input.val(""),
 	    	           name_input.val(""),
 	    	           phone_input.val(""),
 	    	           QQ_input.val(""),
@@ -247,15 +245,21 @@ $(document).ready(function(){
 		major_input = parent.find("input[name='user_major']"),
 		join_center = parent.find("select[name='join_center']"),
 		join_title= parent.find("select[name='join_title']");
+		var sex_val;
+		sex_input.each(function(){
+			if(this.checked){
+				sex_val=this.value;
+			}
+		})
 	    if(name_input.val()==""||phone_input.val()==""||join_center.val()==""){
 	    	alert("请把信息填写完整");
 	    }else{
 	    	$.ajax({
-	    	    url: 'http://hr.ecjtu.net/index.php/handle',
+	    	    url: 'http://localhost/hr_ecjtu_net_17/index.php/handle',
 	    	    type: 'POST',
 	    	    dataType: 'json',
 	    	    data: { 
-	    	    	    user_sex:sex_input.val(),
+	    	    	    user_sex:sex_val,
 	    	            user_name:name_input.val(),
 	    	            user_phone:phone_input.val(),
 	    	            user_QQ:QQ_input.val(),
@@ -269,8 +273,8 @@ $(document).ready(function(){
 		        {
 		        	if(data==1){
 		        		alert("提交成功");
-		        		$(".forms").hide();
-		        		$(".cover").hide();
+		        		$(".close").click();
+		        		$(".cover").click();
 		        	}
 		        },
 		        error:function(error)
