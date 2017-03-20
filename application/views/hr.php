@@ -7,7 +7,7 @@
     <title>日新招新啦</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css"/>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/css reset.css"/>
+    <link rel="stylesheet" href="css/css_reset.css"/>
     <link rel="stylesheet" href="css/shake.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
@@ -387,7 +387,7 @@
             <img src="images/jizhetuan/jizhetuan.png" class="programmer">
             <img src="images/jizhetuan/bianjizu.png" id="boy_4" class="programmer">
         </div>
-            <img src="images/jizhetuan/qq.png" id="qq" class="programmer">
+            <img src="images/jizhetuan/QQ.png" id="qq" class="programmer">
     </section>
 </div>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
