@@ -1,3 +1,4 @@
+
 /*fullpage 导航属性更改*/
 #fp-nav ul li{
 	font-size: 18px;
@@ -30,7 +31,6 @@
 	top:5px;
 	z-index: 999;
 	width: 370px;
-	/*height:568px;*/
 	background: url(../images/jishu/bg1.png) no-repeat;
 	background-size: 100% 100%;
 	display: none;

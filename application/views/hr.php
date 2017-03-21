@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="css/css_reset.css"/>
     <link rel="stylesheet" href="css/shake.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        @media screen and (max-width: 420px){
+            .forms{
+                width:100%;
+                height: 100%;
+                top:0;
+                left: 0;
+                margin:0;
+            }
+            #persons{
+                top:50%;
+                left:17%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -47,11 +62,11 @@
                 <p style="margin-top: 40px">
                     <label id="female">
                         <img src="images/jishu/girl.png">
-                        <input type="radio" name="user_sex" value="female" checked>
+                        <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
                         <img src="images/jishu/boy.png">
-                        <input type="radio" name="user_sex" value="male">
+                        <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
                 <p style="margin-top: 10px">
@@ -157,11 +172,11 @@
                 <p style="margin-top: 40px">
                     <label id="female">
                         <img src="images/jishu/girl.png">
-                        <input type="radio" name="user_sex" value="female" checked>
+                        <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
                         <img src="images/jishu/boy.png">
-                        <input type="radio" name="user_sex" value="male">
+                        <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
                 <p style="margin-top: 10px">
@@ -286,11 +301,11 @@
                 <p style="margin-top: 40px">
                     <label id="female">
                         <img src="images/jishu/girl.png">
-                        <input type="radio" name="user_sex" value="female" checked>
+                        <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
                         <img src="images/jishu/boy.png">
-                        <input type="radio" name="user_sex" value="male">
+                        <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
                 <p style="margin-top: 10px">
