@@ -80,10 +80,10 @@ $(document).ready(function(){
 								$("#dialog_box_3").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('新媒体办公室：华东交通大学微信公众号是华东交通大学主要对外宣传的新媒体，第一时间发布交大权威信息，展现交大校园生活，传递正能量，服务广大师生校友，该微信平台是江西省首个开通的高校微信公众平台的订阅号，至今为止已拥有30000余粉丝。',$('#dialog_box_3'));
+	                                	type('我貌似走错地方了，你能告诉我昆卡在哪里么？',$('#dialog_box_3'));
 									break;
 									case 1:
-									    type('欢迎加入产品运营中心！',$('#dialog_box_3'));
+									    type('新媒体办公室：华东交通大学微信公众号是华东交通大学主要对外宣传的新媒体，第一时间发布交大权威信息，展现交大校园生活，传递正能量，服务广大师生校友，该微信平台是江西省首个开通的高校微信公众平台的订阅号，至今为止已拥有30000余粉丝。',$('#dialog_box_3'));
 									break;
 									case 2:
 									    type('欢迎加入视觉摄影产品！',$('#dialog_box_3'));
@@ -159,7 +159,6 @@ $(document).ready(function(){
 					$(".forms").hide();
 					$('#fp-nav ').show();
 					$('.tips').hide();
-                       sex_input.val(""),
 	    	           name_input.val(""),
 	    	           phone_input.val(""),
 	    	           QQ_input.val(""),
@@ -176,7 +175,6 @@ $(document).ready(function(){
 					$('#fp-nav ').show();
 					$('.dialog_box').hide();
 					$('.tips').hide();
-		                sex_input.val(""),
 	    	           name_input.val(""),
 	    	           phone_input.val(""),
 	    	           QQ_input.val(""),
@@ -247,6 +245,12 @@ $(document).ready(function(){
 		major_input = parent.find("input[name='user_major']"),
 		join_center = parent.find("select[name='join_center']"),
 		join_title= parent.find("select[name='join_title']");
+		var sex_val;
+		sex_input.each(function(){
+			if(this.checked){
+				sex_val=this.value;
+			}
+		})
 	    if(name_input.val()==""||phone_input.val()==""||join_center.val()==""){
 	    	alert("请把信息填写完整");
 	    }else{
@@ -255,7 +259,7 @@ $(document).ready(function(){
 	    	    type: 'POST',
 	    	    dataType: 'json',
 	    	    data: { 
-	    	    	    user_sex:sex_input.val(),
+	    	    	    user_sex:sex_val,
 	    	            user_name:name_input.val(),
 	    	            user_phone:phone_input.val(),
 	    	            user_QQ:QQ_input.val(),
@@ -269,8 +273,8 @@ $(document).ready(function(){
 		        {
 		        	if(data==1){
 		        		alert("提交成功");
-		        		$(".forms").hide();
-		        		$(".cover").hide();
+		        		$(".close").click();
+		        		$(".cover").click();
 		        	}
 		        },
 		        error:function(error)
