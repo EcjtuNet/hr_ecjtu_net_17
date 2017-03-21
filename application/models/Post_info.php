@@ -8,32 +8,59 @@ class Post_info extends CI_Model
 		parent::__construct();
 	}
 
-	public function insertInfo($data)
+	public function get_hr_user($user_id, $hr_id)
 	{
+		$this->db->from('hr_user');
+		$this->db->where('user_id',$user_id);
+		$this->db->where('hr_id',$hr_id);
+		$query=$this->db->get()->result();
+		return $query;
+	}
+	
+	public function get_user_id($user_name, $user_phone)
+	{
+		$this->db->select('user_id');
+		$this->db->from('user_info');
+		$this->db->where('user_name',$user_name);
+		$this->db->where('user_phone',$user_phone);
+		if($query=$this->db->get()->result()){
+			return $query[0]->user_id;
+		}
+	}
+	
+	public function get_hr_id($join_center, $join_title)
+	{
+		$this->db->select('hr_id');
+		$this->db->from('hr_info');
+		$this->db->where('hr_center',$join_center);
+		$this->db->where('hr_department',$join_title);
+		if($query=$this->db->get()->result()){
+			return $query[0]->hr_id;
+		}
+	}
 
+	public function insert_user_info($data)
+	{
 		$info = array(
-			'grade_input' => $data['grade_input'],
-			'join_title' => $data['join_title'],
-			'user_QQ' => $data['user_QQ'],
+			'user_name'    => $data['user_name'],
+			'user_sex'     => $data['user_sex'],
+			'term'         => $data['grade_input'],
 			'user_college' => $data['user_college'],
-			'user_major' => $data['user_major'],
-			'user_name' => $data['user_name'],
-			'user_phone' => $data['user_phone'],
-			'user_sex' => $data['user_sex']
+			'user_major'   => $data['user_major'],
+			'user_phone'   => $data['user_phone'],
+			'user_qq'      => $data['user_QQ']
 			);
-		if($data['join_center'] == '新闻出版中心')
-		{
-			$query = $this->db->insert('xinwensingup',$info);
-		}elseif ($data['join_center'] == '技术研发中心') {
-			$query = $this->db->insert('jishusingup',$info);
-		}elseif ($data['join_center'] == '行政管理中心') {
-			$query = $this->db->insert('xingzhengsingup',$info);
-		}elseif ($data['join_center'] == '产品运营中心') {
-			$query = $this->db->insert('chanpinsingup',$info);
-		}
-		if($query)
-		{
-			return 1;
-		}
+		$this->db->insert('user_info',$info);
+	}
+	
+	public function insert_hr_info($data_sign)
+	{
+		$time = date('Y-m-d h:i:sa');
+		$info = array(
+			'user_id' => $data_sign['user_id'],
+			'hr_id'   => $data_sign['hr_id'],
+			'register_time'  => $time			
+			);
+		$this->db->insert('hr_user',$info);
 	}
 }
