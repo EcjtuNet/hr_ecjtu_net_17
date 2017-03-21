@@ -255,7 +255,7 @@ $(document).ready(function(){
 	    	alert("请把信息填写完整");
 	    }else{
 	    	$.ajax({
-	    	    url: 'http://hr.ecjtu.net/index.php/handle',
+	    	    url: 'http://hr.ecjtu.net/index.php/handle/check',
 	    	    type: 'POST',
 	    	    dataType: 'json',
 	    	    data: { 
@@ -271,15 +271,30 @@ $(document).ready(function(){
 	    	        },
 		        success:function(data)
 		        {
-		        	if(data==1){
-		        		alert("提交成功");
-		        		$(".close").click();
-		        		$(".cover").click();
+		        	if(data.status==1)
+		        	{
+		        		alert("提交成功,我们会给你发送邮件");
+		        		// $(".close").click();
+		        		// $(".cover").click();
+		        	}
+		        	else
+		        	if(data.status==2)
+		        	{
+		        		alert("信息有问题哦，再检查一下");
+		        		// $(".close").click();
+		        		// $(".cover").click();
+		        	}
+		        	else
+		        	if(data.status==3)
+		        	{
+		        		alert("你已经报过名了");
+		        		// $(".close").click();
+		        		// $(".cover").click();
 		        	}
 		        },
 		        error:function(error)
 		        {
-		        	console.log(error);
+		        	//console.log(error.responseText);
 		        },
 	     });
 	    }
