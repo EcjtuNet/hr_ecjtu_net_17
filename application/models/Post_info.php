@@ -55,7 +55,8 @@ class Post_info extends CI_Model
 	
 	public function insert_hr_info($data_sign)
 	{
-		$time = date('Y-m-d h:i:sa');
+		date_default_timezone_set(PRC);
+		$time = date('Y-m-d h:i:s');
 		$info = array(
 			'user_id' => $data_sign['user_id'],
 			'hr_id'   => $data_sign['hr_id'],
