@@ -9,19 +9,26 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/css_reset.css"/>
     <link rel="stylesheet" href="css/shake.css"/>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <style>
-        @media screen and (max-width: 420px){
+        @media screen and (max-width: 800px){
             .forms{
+                overflow:scroll;
                 width:100%;
                 height: 100%;
                 top:0;
                 left: 0;
                 margin:0;
             }
+        }
+        @media screen and (max-width: 420px){
             #persons{
-                top:50%;
-                left:17%;
+                width:250px;
+                margin-left: -125px;
+            }
+            #cameras{
+                margin-right: 0px;
             }
         }
     </style>
@@ -31,41 +38,46 @@
 <div id="fullpage">
 <!---section1-->
     <section class="section" id="page1">
-        <div id="bg_1">
-            <img src="images/jinru/bg1.png" id="bg1">
-            <div id="flower">
-                <img src="images/jinru/flower-1.png" id="flower-1">
-                <img src="images/jinru/flower-2.png" id="flower-2">
-            </div>
-            <div id="train">
-                <img src="images/jinru/smoke1.png" id="smoke_1">
-                <img src="images/jinru/smoke2.png" id="smoke_2">
-                <img src="images/jinru/train.png" id="train_1">
+        <div class="cover">
+            <div id="ori_tip">
+                <h2>建议横屏&全屏浏览</h2>
             </div>
         </div>
-        <img src="images/jinru/girl.png" id="girl_1">
-        <img src="images/jinru/Loading.png" id="Loading" class="shake">
+        <div id="bg_1">
+            <img data-src="images/jinru/bg1.png" id="bg1">
+            <div id="flower">
+                <img data-src="images/jinru/flower-1.png" id="flower-1">
+                <img data-src="images/jinru/flower-2.png" id="flower-2">
+            </div>
+            <div id="train">
+                <img data-src="images/jinru/smoke1.png" id="smoke_1">
+                <img data-src="images/jinru/smoke2.png" id="smoke_2">
+                <img data-src="images/jinru/train.png" id="train_1">
+            </div>
+        </div>
+        <img data-src="images/jinru/girl.png" id="girl_1">
+        <img data-src="images/jinru/Loading.png" id="Loading" class="shake">
     </section>
 <!---section2-->
     <section class="section" id="page2">
         <div id="more_tip">
-            <h2>点击人物，获取跟多信息</h2>
+            <h2>點擊人物，獲取跟多信息</h2>
         </div>
         <div class="cover">
         </div>
 <!-- 报名表 -->
         <div class="forms">
             <div class="close">
-                <img src="images/jishu/return.png">
+                <img data-src="images/jishu/return.png">
             </div>
             <form method="post" accept-charset="UTF-8" action="">
                 <p style="margin-top: 40px">
                     <label id="female">
-                        <img src="images/jishu/girl.png">
+                        <img data-src="images/jishu/girl.png">
                         <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
-                        <img src="images/jishu/boy.png">
+                        <img data-src="images/jishu/boy.png">
                         <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
@@ -74,13 +86,13 @@
                         <span>姓名</span><input type="text" name="user_name" class="user_name">
                     </label>
                 </p>
-                <p class="tips tip1" style="display: none;">请填写姓名！！！</p>
+                <p class="tips tip1" style="display: none;">請填寫姓名！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>电话号码</span><input type="text" name="user_phone" class="user_phone" onkeyup="value=value.replace(/[^\d]/g,'') " />
+                        <span>電話號碼</span><input type="text" name="user_phone" class="user_phone" onkeyup="value=value.replace(/[^\d]/g,'') " />
                     </label>
                 </p>
-                <p class="tips tip2" style="display:none;">请填写联系电话！！！</p>
+                <p class="tips tip2" style="display:none;">請填寫聯系電話！！！</p>
                 <p>
                     <label class="text_input">
                         <span>QQ</span><input type="text" name="user_QQ" onkeyup="value=value.replace(/[^\d]/g,'') " />
@@ -88,7 +100,7 @@
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>学院</span>
+                        <span>學院</span>
                         <select name="user_college">
                                     <option value="0"></option>
                                     <option value="土木建筑学院">土木建筑学院</option>
@@ -110,15 +122,15 @@
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>年级</span><input type="text" name="user_grade" >
+                        <span>年級</span><input type="text" name="user_grade" >
                     </label>
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>专业</span><input type="text" name="user_major" >
+                        <span>專業</span><input type="text" name="user_major" >
                     </label>
                 </p>
-                <h2>报名方向</h2>
+                <h2>報名方向</h2>
                 <p style="margin-top: 0;">
                     <label class="text_input">
                         <span>中心</span>
@@ -131,10 +143,10 @@
                                 </select>
                     </label>
                 </p>
-                <p class="tips tip3" style="display:none;">请选择中心！！！</p>
+                <p class="tips tip3" style="display:none;">請選擇中心！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>部门</span>
+                        <span>部門</span>
                         <select name="join_title" id="join_title1">
                         </select>
                     </label>
@@ -143,20 +155,18 @@
             </form>
         </div>
         <div class="dialog_box" id="dialog_box_2">
-            <div class="pic">
-                <img src="images/jishu/yidong_pic.png">
-                <img src="images/jishu/houduan_pic.png">
-                <img src="images/jishu/qianduan_pic.png">
-                <img src="images/jishu/sheji_pic.png">
-            </div>
+            <div class="pic"><div id="img1"></div><p>移動端</p></div>
+            <div class="pic"><div id="img2"></div><p>産品部</p></div>
+            <div class="pic"><div id="img3"></div><p>網建部</p></div>
+            <div class="pic"><div id="img4"></div><p>設計部</p></div>
         </div>
-        <img src="images/jishu/menu.png" class="menu shake">
-        <img src="images/jishu/yidong.png" id="mobiler" class="programmer">
+        <img data-src="images/jishu/menu.png" class="menu shake">
+        <img data-src="images/jishu/yidong.png" id="mobiler" class="programmer">
         <div id="programmers">
-            <img src="images/jishu/houduan.png" id="hou" class="programmer">
-            <img src="images/jishu/qianduan.png" id="qian" class="programmer">
-            <img src="images/jishu/sheji.png" id="cat" class="programmer">
-            <img src="images/jishu/more.png" id="more" class="shake">
+            <img data-src="images/jishu/houduan.png" id="hou" class="programmer">
+            <img data-src="images/jishu/qianduan.png" id="qian" class="programmer">
+            <img data-src="images/jishu/sheji.png" id="cat" class="programmer">
+            <img data-src="images/jishu/more.png" id="more" class="shake">
         </div>
     </section>
 <!---section3-->
@@ -166,16 +176,16 @@
         <!-- 报名表 -->
         <div class="forms">
             <div class="close">
-                <img src="images/jishu/return.png">
+                <img data-src="images/jishu/return.png">
             </div>
             <form method="post" accept-charset="UTF-8" action="">
                 <p style="margin-top: 40px">
                     <label id="female">
-                        <img src="images/jishu/girl.png">
+                        <img data-src="images/jishu/girl.png">
                         <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
-                        <img src="images/jishu/boy.png">
+                        <img data-src="images/jishu/boy.png">
                         <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
@@ -184,13 +194,13 @@
                         <span>姓名</span><input type="text" name="user_name" class="user_name">
                     </label>
                 </p>
-                <p class="tips tip1"  style="display: none;">请填写姓名！！！</p>
+                <p class="tips tip1"  style="display: none;">請填寫姓名！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>电话号码</span><input type="text" name="user_phone" class="user_phone"onkeyup="value=value.replace(/[^\d]/g,'') " />
+                        <span>電話號碼</span><input type="text" name="user_phone" class="user_phone"onkeyup="value=value.replace(/[^\d]/g,'') " />
                     </label>
                 </p>
-                <p class="tips tip2" style="display:none;">请填写联系电话！！！</p>
+                <p class="tips tip2" style="display:none;">請填寫聯系電話！！！</p>
                 <p>
                     <label class="text_input">
                         <span>QQ</span><input type="text" name="user_QQ" onkeyup="value=value.replace(/[^\d]/g,'') " />
@@ -198,7 +208,7 @@
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>学院</span>
+                        <span>學院</span>
                         <select name="user_college">
                                     <option value="0"></option>
                                     <option value="土木建筑学院">土木建筑学院</option>
@@ -220,15 +230,15 @@
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>年级</span><input type="text" name="user_grade" >
+                        <span>年級</span><input type="text" name="user_grade" >
                     </label>
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>专业</span><input type="text" name="user_major" >
+                        <span>專業</span><input type="text" name="user_major" >
                     </label>
                 </p>
-                <h2>报名方向</h2>
+                <h2>報名方向</h2>
                 <p style="margin-top: 0;">
                     <label class="text_input">
                         <span>中心</span>
@@ -241,10 +251,10 @@
                                 </select>
                     </label>
                 </p>
-                <p class="tips tip3" style="display:none;">请选择中心！！！</p>
+                <p class="tips tip3" style="display:none;">請選擇中心！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>部门</span>
+                        <span>部門</span>
                         <select name="join_title" id="join_title2">
                         </select>
                     </label>
@@ -254,36 +264,49 @@
         </div>
         <div class="dialog_box" id="dialog_box_3">
             <div class="pic">
-                <img src="images/chanpin/chaoxi_pic.png">
-                <img src="images/chanpin/sheji_pic.png">
-                <img src="images/chanpin/shijue_pic.png">
-                <img src="images/chanpin/yingshi_pic.png">
-                <img src="images/chanpin/hujian_pic.png">
+                <div id="img5"></div>
+                <p>潮汐獵人</p>
+            </div>
+            <div class="pic">
+                <div id="img6"></div>
+                <p>新媒體辦公室</p>
+            </div>
+            <div class="pic">
+                <div id="img7"></div>
+                <p>視覺攝影</p>
+            </div>
+            <div class="pic">
+                <div id="img8"></div>
+                <p>影視工作室</p>
+            </div>
+            <div class="pic">
+                <div id="img9"></div>
+                <p>創意設計部</p>
             </div>
         </div>
-        <img src="images/jishu/menu.png" class="menu shake">
-        <img src="images/chanpin/chaoxi.png" id="greener" class="programmer">
+        <img data-src="images/jishu/menu.png" class="menu shake">
+        <img data-src="images/chanpin/chaoxi.png" id="greener" class="programmer">
         <div id="tunnel">
-            <img src="images/chanpin/gai.png" class="gai">
+            <img data-src="images/chanpin/gai.png" class="gai">
             <div style="overflow: hidden;display: inline-block;width: 113px;height: 98px;">
-                <img src="images/chanpin/hole.png">
-                <img src="images/chanpin/sheji.png" id="sheji" class="programmer">
+                <img data-src="images/chanpin/hole.png">
+                <img data-src="images/chanpin/sheji.png" id="sheji" class="programmer">
             </div>
         </div>
         <div id="persons">
-            <div style="display: inline-block;margin-right: 57px;">
-                <img src="images/chanpin/shijue.png" id="ss" class="programmer">
-                <img src="images/chanpin/camera.png" id="camera">
+            <div id="cameras">
+                <img data-src="images/chanpin/shijue.png" id="ss" class="programmer">
+                <img data-src="images/chanpin/camera.png" id="camera">
             </div>
             <div style="display: inline-block;">
                 <div id="hd">
-                    <img src="images/chanpin/yingshi.png" class="programmer">
-                    <img src="images/chanpin/hair.png" id="hair">
-                    <p id="p_1">老大我手上可能有个活要你。。。</p>
+                    <img data-src="images/chanpin/yingshi.png" class="programmer">
+                    <img data-src="images/chanpin/hair.png" id="hair">
+                    <p id="p_1">老大我手上可能有個活要你。。。</p>
                 </div>
                 <div id="hj">
-                    <img src="images/chanpin/hujian.png" class="programmer">
-                    <p id="p_2">滚</p>
+                    <img data-src="images/chanpin/hujian.png" class="programmer">
+                    <p id="p_2">滾</p>
                 </div>
             </div>
         </div>
@@ -295,16 +318,16 @@
         <!-- 报名表 -->
         <div class="forms">
             <div class="close">
-                <img src="images/jishu/return.png">
+                <img data-src="images/jishu/return.png">
             </div>
             <form method="post" accept-charset="UTF-8" action="">
                 <p style="margin-top: 40px">
                     <label id="female">
-                        <img src="images/jishu/girl.png">
+                        <img data-src="images/jishu/girl.png">
                         <input type="radio" name="user_sex" value="女" checked="true">
                     </label>
                     <label id="male">
-                        <img src="images/jishu/boy.png">
+                        <img data-src="images/jishu/boy.png">
                         <input type="radio" name="user_sex" value="男">
                     </label>
                 </p>
@@ -313,13 +336,13 @@
                         <span>姓名</span><input type="text" name="user_name" class="user_name">
                     </label>
                 </p>
-                <p class="tips tip1" style="display: none;">请填写姓名！！！</p>
+                <p class="tips tip1" style="display: none;">請填寫姓名！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>电话号码</span><input type="text" name="user_phone" class="user_phone"onkeyup="value=value.replace(/[^\d]/g,'') " />
+                        <span>電話號碼</span><input type="text" name="user_phone" class="user_phone"onkeyup="value=value.replace(/[^\d]/g,'') " />
                     </label>
                 </p>
-                <p class="tips tip2" style="display:none;">请填写联系电话！！！</p>
+                <p class="tips tip2" style="display:none;">請填寫聯系電話！！！</p>
                 <p>
                     <label class="text_input">
                         <span>QQ</span><input type="text" name="user_QQ" onkeyup="value=value.replace(/[^\d]/g,'') " />
@@ -327,7 +350,7 @@
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>学院</span>
+                        <span>學院</span>
                         <select name="user_college">
                                     <option value="0"></option>
                                     <option value="土木建筑学院">土木建筑学院</option>
@@ -349,15 +372,15 @@
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>年级</span><input type="text" name="user_grade" >
+                        <span>年級</span><input type="text" name="user_grade" >
                     </label>
                 </p>
                 <p>
                     <label class="text_input">
-                        <span>专业</span><input type="text" name="user_major" >
+                        <span>專業</span><input type="text" name="user_major" >
                     </label>
                 </p>
-                <h2>报名方向</h2>
+                <h2>報名方向</h2>
                 <p style="margin-top: 0;">
                     <label class="text_input">
                         <span>中心</span>
@@ -370,10 +393,10 @@
                                 </select>
                     </label>
                 </p>
-                <p class="tips tip3" style="display:none;">请选择中心！！！</p>
+                <p class="tips tip3" style="display:none;">請選擇中心！！！</p>
                 <p>
                     <label class="text_input">
-                        <span>部门</span>
+                        <span>部門</span>
                         <select name="join_title" id="join_title3">
                         </select>
                     </label>
@@ -383,31 +406,57 @@
         </div>
         <div class="dialog_box" id="dialog_box_4">
             <div class="pic">
-                <img src="images/jizhetuan/weixin_pic.png">
-                <img src="images/jizhetuan/xingzheng_pic.png">
-                <img src="images/jizhetuan/jizhetuan_pic.png">
-                <img src="images/jizhetuan/bianjizu_pic.png">
-                <img src="images/jizhetuan/QQ_pic.png">
+                <div id="img10"></div>
+                <p>微博</p>
+            </div>
+            <div class="pic">
+                <div id="img11"></div>
+                <p>行政</p>
+            </div>
+            <div class="pic">
+                <div id="img12"></div>
+                <p>記者團</p>
+            </div>
+            <div class="pic">
+                <div  id="img13"></div>
+                <p>編輯部</p>
+            </div>
+            <div class="pic">
+                <div  id="img14"></div>
+                <p>QQ</p>
             </div>
         </div>
-        <img src="images/jishu/menu.png" class="menu shake">
+        <img data-src="images/jishu/menu.png" class="menu shake">
         <div id="xingzheng">
-            <img src="images/jizhetuan/weixin.png" class="programmer">
-            <img src="images/jizhetuan/xingzheng.png" class="programmer" style="position: relative;top:-10px;left: -15px;">
+            <img data-src="images/jizhetuan/weixin.png" class="programmer">
+            <img data-src="images/jizhetuan/xingzheng.png" class="programmer" style="position: relative;top:-10px;left: -15px;">
         </div>
         <div id="lady">
             <div id="s_dialog_box">
-                <p>滚去写新闻</p>
+                <p>滾去寫新聞</p>
             </div>
-            <img src="images/jizhetuan/jizhetuan.png" class="programmer">
-            <img src="images/jizhetuan/bianjizu.png" id="boy_4" class="programmer">
+            <img data-src="images/jizhetuan/jizhetuan.png" class="programmer">
+            <img data-src="images/jizhetuan/bianjizu.png" id="boy_4" class="programmer">
         </div>
-            <img src="images/jizhetuan/QQ.png" id="qq" class="programmer">
+            <img data-src="images/jizhetuan/QQ.png" id="qq" class="programmer">
     </section>
 </div>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.3/jquery.fullpage.min.js"></script>
 <script type="text/javascript" src="js/fullpages.js"></script>
+<script src="js/jquery-ui-1.10.4.min.js"></script>
+<script src="js/jquery.mousewheel-3.0.6.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="js/hr.js"></script>
+<!-- 自定义滚动条 -->
+<script type='text/javascript'>
+    (function($){
+            $(".forms").mCustomScrollbar({
+              theme:"rounded-dark",
+              scrollInertia:550,
+              mouseWheelPixels:300     
+            });
+    })(jQuery);
+</script>
 </body>
 </html>

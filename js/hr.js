@@ -1,10 +1,10 @@
 var t,m,p,q,time;
 $(document).ready(function(){
-	                var dialog_box_2=document.getElementById("dialog_box_2").getElementsByTagName("img");
+	                var dialog_box_2=document.getElementById("dialog_box_2").getElementsByClassName("pic");
 	                var programmer_2=document.getElementById("page2").getElementsByClassName("programmer");
-					var dialog_box_3=document.getElementById("dialog_box_3").getElementsByTagName("img");
+					var dialog_box_3=document.getElementById("dialog_box_3").getElementsByClassName("pic");
 	                var programmer_3=document.getElementById("page3").getElementsByClassName("programmer");
-	                var dialog_box_4=document.getElementById("dialog_box_4").getElementsByTagName("img");
+	                var dialog_box_4=document.getElementById("dialog_box_4").getElementsByClassName("pic");
 	                var programmer_4=document.getElementById("page4").getElementsByClassName("programmer");
 					var that=$('.buttons');
 					var parent = that.parent().parent().parent();
@@ -18,6 +18,25 @@ $(document).ready(function(){
 					var join_center = parent.find("select[name='join_center']");
 					var join_title= parent.find("select[name='join_title']");
 					var num=0;
+					function hide_tip(){
+						$(".cover").click()
+					}
+					function oriChange(){
+						if(window.orientation!=undefined){
+							if(window.orientation==0){
+                              $('.cover').show();                              
+                              setTimeout(hide_tip,2000);
+							}
+
+						}else if(window.innerWidth <window.innerHeight){
+                           $('.cover').show();
+                           setTimeout(hide_tip,2000);
+					}
+				}
+					$(function(){
+						oriChange();
+					});
+					$(window).bind("orientationchange",oriChange);
 					function type(s,obj){	  
 					    time=setInterval(function(){
 					    obj.append(s.charAt(num));
@@ -46,16 +65,16 @@ $(document).ready(function(){
 								$("#dialog_box_2").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('移动开发部是日新新星部门，为了适应互联网发展与方便校友，于2014年建立，主修iOS手机App及Android手机App技能，在这里能完成你所有疯狂的想法，手机不再只是你的一个工具，而是成为一个万能的神器，只需要一点创意你就能完成所有你想要的功能。',$('#dialog_box_2'));
+	                                	type('移動開發部是日新新星部門，為了適應互聯網發展與方便校友，于2014年建立，主修iOS手機App及Android手機App技能，在這裏能完成你所有瘋狂的想法，手機不再只是你的一個工具，而是成為一個萬能的神器，只需要一點創意你就能完成所有你想要的功能。',$('#dialog_box_2'));
 									break;
 									case 1:
-									    type('产品部隶属于日新网最酷的技术中心，主要负责日新互联网产品的运营、市场推广，我们也致力交大的官网建设，不断便利交大师生的学习与生活。同时负责技术中心的行政事务，对接日常的活动和对外交流。如果你有热情，有想法，有责任，日新技术产品部欢迎你。',$('#dialog_box_2'));
+									    type('産品部隸屬于日新網最酷的技術中心，主要負責日新互聯網産品的運營、市場推廣，我們也致力交大的官網建設，不斷便利交大師生的學習與生活。同時負責技術中心的行政事務，對接日常的活動和對外交流。如果你有熱情，有想法，有責任，日新技術産品部歡迎你。',$('#dialog_box_2'));
 									break;
 									case 2:
-									    type('你喜欢前端吗？前端的世界一直在变化着，在各种熟悉的语言进化中迅速的化学反应。也许你和我们一样，对前端的理解也在不断刷新。我们犹如一群站在互联网风口上的攻城狮，眼前的空间充满了未知，需要我们去开拓去开垦，需要我们逆风而上，不为别的，只为能在这虚拟与现实交错的世界里昂首飞翔！    日新数据开发部门主要是做后台数据开发及日新网服务器维护，当前端的页面做好之后，我们所需要做的就是将后台数据内容渲染到页面中，使页面有了动态的内容。在这里你可以学习到php或者是python的知识，也能学习如何操作服务器。既能学到课堂学不到的知识，又能充实自己的课余生活。',$('#dialog_box_2'));
+									    type('網建部：你喜歡網站建設嗎？在網站的建設中前端的世界一直在變化著，在各種熟悉的語言進化中迅速的化學反應。也許你和我們一樣，對前端的理解也在不斷刷新。我們猶如一群站在互聯網風口上的攻城獅，眼前的空間充滿了未知，需要我們去開拓去開墾，需要我們逆風而上，不為別的，只為能在這虛擬與現實交錯的世界裏昂首飛翔！除此以外，在這裏你可以學習到php和python的知識，還能學習如何操作服務器。不但get學到課堂學不到的知識技能，又能充實自己的課余生活。別猶豫了，快來與我們一起守護校園網站的安全吧！',$('#dialog_box_2'));
 									break;
 									case 3:
-									    type('UI&UX设计部是充满未知性的生物的聚集地，他们形态各异，一般决定了手机APP的风格和网站的设计，设计的经理专治技术总监，现任的经理是一只猫。',$('#dialog_box_2'));
+									    type('UI&UX設計部是充滿未知性的生物的聚集地，他們形態各異，一般決定了手機APP的風格和網站的設計，設計的經理專治技術總監，現任的經理是一只貓。',$('#dialog_box_2'));
 									break;
 									default:
 									break;
@@ -80,21 +99,21 @@ $(document).ready(function(){
 								$("#dialog_box_3").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('我貌似走错地方了，你能告诉我昆卡在哪里么？',$('#dialog_box_3'));
+	                                	type('我貌似走錯地方了，你能告訴我昆卡在哪裏麽？',$('#dialog_box_3'));
 									break;
 									case 1:
-									    type('新媒体办公室：华东交通大学微信公众号是华东交通大学主要对外宣传的新媒体，第一时间发布交大权威信息，展现交大校园生活，传递正能量，服务广大师生校友，该微信平台是江西省首个开通的高校微信公众平台的订阅号，至今为止已拥有30000余粉丝。',$('#dialog_box_3'));
+									    type('新媒體辦公室：華東交通大學微信公衆號是華東交通大學主要對外宣傳的新媒體，第一時間發布交大權威信息，展現交大校園生活，傳遞正能量，服務廣大師生校友，該微信平台是江西省首個開通的高校微信公衆平台的訂閱號，至今為止已擁有30000余粉絲。',$('#dialog_box_3'));
 									break;
 									case 2:
-									    type('欢迎加入视觉摄影产品！',$('#dialog_box_3'));
+									    type('視覺攝影部門：最精美的校園圖集，最優質的宣傳素材，校園的優秀圖集都被我承包了，我們是美圖制造者，來這裏，讓你相機裏的每一幀圖幅都是精美絕倫，讓華東交通大學在你的鏡頭裏永遠閃閃發光。',$('#dialog_box_3'));
 									break;
 									case 3:
 									    
-									    type('欢迎加入日新青梅竹马！',$('#dialog_box_3'));
+									    type('影視工作室：我們拍感情至深的微電影，也做脍炙人口的小視頻。能溫情能催淚，有歡笑有發人深省。我們的微電影《織夢》曾獲交大微電影大賽“最佳影片”及“最佳女主角”，更入圍了全國大學生微電影大賽。從台前到幕後，從策劃到拍攝到後期制作，親身經曆，讓我們一起感受影視的魅力吧。',$('#dialog_box_3'));
 									    
 									break;
 									case 4:
-									    type('欢迎加入《交大青年》杂志社！',$('#dialog_box_3'));
+									    type('創意設計部：你手中的手繪交大地圖，鍾意的花椒明信片，紀念版暗藏校園風景的鑰匙扣，限量版的華東交通大學45周年可樂...我們只設計制作最具校園文化特色的周邊産品，心靈手巧的你趕快加入我們吧。',$('#dialog_box_3'));
 									break;
 									default:
 									break;
@@ -119,19 +138,19 @@ $(document).ready(function(){
 								$("#dialog_box_4").empty().append(img);
 								switch(j){
 									case 0:
-	                                	type('微博：新浪微博“华东交通大学日新网”本着服务交大师生的宗旨，日新网主页微博以发布学校通知，传递校内外重要资讯为主。做校园里的小清新，学生们的贴心人。',$('#dialog_box_4'));
+	                                	type('微博運營團隊：想成為擁有上萬粉絲的“網紅達人”嗎？快來與微博運營團一起玩轉微博，發現校園新鮮事，變身“網紅段子手”。在這裏你不僅是校園熱點的搬運工，更是時事熱點的創造者!',$('#dialog_box_4'));
 									break;
 									case 1:
-									    type('欢迎加入行政部门！',$('#dialog_box_4'));
+									    type('行政管理中心：掌控日新運營中樞，引領日新前進方向，統管日新人事合理配置。在這裏，你就是日新的大腦，由你來續寫日新今後的輝煌',$('#dialog_box_4'));
 									break;
 									case 2:
-									    type('日新网新闻出版中心下设编辑部、记者团（QQ）、新媒体办公室、微博，全面负责校园内外的新闻报道工作。新闻出版中心的全体成员始终坚持以崭新的姿态和进取的精神，用更加及时、全面、深入的报道赢得新的认可和肯定。',$('#dialog_box_4'));
+									    type('記者團：在這裏，你可以是大牌記者，第一時間與校園熱點“面對面”，接觸不一樣的新鮮活動，撰寫最具逼格的稿件文章。',$('#dialog_box_4'));
 									break;
 									case 3:
-									    type('编辑部：通常由大二至大三学生组成，负责编辑日常的网站后台编辑，对记者团采写的稿件进行编发，制作web网页专题，负责图片文字的处理，协助其他部门进行工作。',$('#dialog_box_4'));
+									    type('編輯部：通常由大二至大三學生組成，負責編輯日常的網站後台編輯，對記者團采寫的稿件進行編發，制作web網頁專題，負責圖片文字的處理，協助其他部門進行工作。',$('#dialog_box_4'));
 									break;
 									case 4:
-									    type('记者团（QQ）：负责采集学校第一手的网页信息，针对学校的各类现象进行深入挖掘报道，永远走在校园的第一现场，与各种校园达人面对面接触。',$('#dialog_box_4'));
+									    type('QQ運營團隊：想與粉絲親切交談，熱情聊天嗎？你與“QQ網紅”只差一個日小新！在QQ 運營裏，我們是趣事和新聞的傳播者，聊天、鬥圖我們樣樣在行！',$('#dialog_box_4'));
 									break;
 									default:
 									break;
@@ -255,7 +274,7 @@ $(document).ready(function(){
 	    	alert("请把信息填写完整");
 	    }else{
 	    	$.ajax({
-	    	    url: 'http://hr.ecjtu.net/index.php/handle/check',
+	    	    url: 'http://hr.ecjtu.net/index.php/handle',
 	    	    type: 'POST',
 	    	    dataType: 'json',
 	    	    data: { 
@@ -271,30 +290,15 @@ $(document).ready(function(){
 	    	        },
 		        success:function(data)
 		        {
-		        	if(data.status==1)
-		        	{
-		        		alert("提交成功,我们会给你发送邮件");
-		        		// $(".close").click();
-		        		// $(".cover").click();
-		        	}
-		        	else
-		        	if(data.status==2)
-		        	{
-		        		alert("信息有问题哦，再检查一下");
-		        		// $(".close").click();
-		        		// $(".cover").click();
-		        	}
-		        	else
-		        	if(data.status==3)
-		        	{
-		        		alert("你已经报过名了");
-		        		// $(".close").click();
-		        		// $(".cover").click();
+		        	if(data==1){
+		        		alert("提交成功");
+		        		$(".close").click();
+		        		$(".cover").click();
 		        	}
 		        },
 		        error:function(error)
 		        {
-		        	//console.log(error.responseText);
+		        	console.log(error);
 		        },
 	     });
 	    }
